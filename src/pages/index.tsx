@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import Image from "next/image";
+import Head from "next/head";
 
 const Home: NextPage = () => {
-  const test = "aiueo";
+  var test = "aiueo";
   return (
     <div className={styles.container}>
       <Head>

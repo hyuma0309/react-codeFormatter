@@ -5,6 +5,7 @@ module.exports = {
     browser: true,
     es6: true,
   },
+  parser: "@typescript-eslint/parser",
   extends: ["next/core-web-vitals", "plugin:import/recommended", "plugin:import/warnings", "prettier"],
   overrides: [
     // This configuration will apply only to TypeScript files
@@ -15,7 +16,13 @@ module.exports = {
         node: true,
         es6: true,
       },
-      extends: ["next/core-web-vitals", "plugin:import/recommended", "plugin:import/warnings", "prettier"],
+      extends: [
+        "next/core-web-vitals",
+        "plugin:import/recommended",
+        "plugin:import/warnings",
+        "plugin:@typescript-eslint/recommended", // TypeScript rules
+        "prettier",
+      ],
       rules: {
         "import/order": [
           "error",
@@ -38,4 +45,5 @@ module.exports = {
       },
     ],
   },
+  plugins: ["@typescript-eslint"],
 };
